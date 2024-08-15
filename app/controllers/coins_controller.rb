@@ -1,9 +1,13 @@
 class CoinsController < ApplicationController
   before_action :set_coin, only: %i[ show edit update destroy ]
+  #passa por esse método qualquer uma dessas acoes que precisam pesquisar alguem / setar
 
   # GET /coins or /coins.json
   def index
-    @coins = Coin.all
+    #variavel de instância = model Coin / .all = seleciona todas as moedas e joga na variável @coins
+    @coins = Coin.all 
+    #Coin representa o banco de dados, a tabela de moedas.
+    #@coins sempre vai ter muitos elementos, essa moeda vai vir dentro de um array, entao é preciso iterar dentro desse array p/ pegar cada um desses elementos.
   end
 
   # GET /coins/1 or /coins/1.json
@@ -59,8 +63,11 @@ class CoinsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    #Pegar a moeda @coin e encontrar ela a partir do parametro id.
     def set_coin
       @coin = Coin.find(params[:id])
+      #faz o find desse parametro id que é o numero daquela moeda, encontra a moeda e joga na variável @coin
+      #find retorna um único elemento.
     end
 
     # Only allow a list of trusted parameters through.
