@@ -10,5 +10,5 @@
 Coin.create!(
   description: "bitcoin",
   acronym: "BTC",
-  url_image: 
+  url_image: "https://static.vecteezy.com/system/resources/previews/019/767/927/non_2x/bitcoin-logo-bitcoin-icon-transparent-free-png.png"
 )
