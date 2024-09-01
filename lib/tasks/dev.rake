@@ -8,8 +8,9 @@ namespace :dev do
     
       show_spinner("Migrando BD...") { %x(rails db:migrate) }
 
+      %x(rails dev:add_mining_types)
       %x(rails dev:add_coins)
-      %x(rails dev:add_mining_types)     
+           
     else
       puts "You are not in development environment."
     end    
@@ -22,12 +23,13 @@ namespace :dev do
               {
                 description: "bitcoin",
                 acronym: "BTC",
-                url_image: "https://static.vecteezy.com/system/resources/previews/019/767/927/non_2x/bitcoin-logo-bitcoin-icon-transparent-free-png.png"
+                url_image: "https://static.vecteezy.com/system/resources/previews/019/767/927/non_2x/bitcoin-logo-bitcoin-icon-transparent-free-png.png",
+                mining_type_id: MiningType.find_by(acronym: 'PoW').id
               },
             ]
     
       coins.each do |coin|
-      Coin.find_or_create_by!(coin)
+        Coin.find_or_create_by!(coin)
       end
     end
   end
