@@ -78,6 +78,7 @@ GEM
     date (3.3.4)
     erubi (1.13.0)
     execjs (2.9.1)
+    ffi (1.17.0)
     ffi (1.17.0-arm64-darwin)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -116,6 +117,9 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.3)
+    nokogiri (1.15.6)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.15.6-arm64-darwin)
       racc (~> 1.4)
     pry (0.14.2)
@@ -222,6 +226,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-23
+  ruby
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)

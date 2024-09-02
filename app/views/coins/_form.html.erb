@@ -25,7 +25,11 @@
     <%= form.label :url_image %>
     <%= form.text_field :url_image %>
     <%# <%= image_tag coin.url_image, size: "25x25" %> %>
+  </div>
 
+  <div class="field">
+    <%= form.label :mining_type_id %>
+    <%= form.select("mining_type_id", MiningType.all.pluck(:description, :id), {include_blank: "Selecione..."})%>
   </div>
 
   <div class="actions">
