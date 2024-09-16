@@ -1,4 +1,5 @@
 pt-BR:
+  actual_locale: "pt-BR"
   hello: "Olá, mundo!"
   links:
     edit: "Editar"
