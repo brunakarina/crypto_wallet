@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'pry-rails'
 gem 'tty-spinner'
+gem 'rails-i18n', '~> 5.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
