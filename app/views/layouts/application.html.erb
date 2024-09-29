@@ -6,7 +6,6 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
 
 
@@ -15,6 +14,17 @@
   </head>
 
   <body>
-    <%= yield %> <%# pode ser o index.html.erb, edit.html.erb...%>
+			<div class="container-fluid">
+				<ul class="nav">
+						<li class="nav-item">
+							<%= link_to 'Português', root_path(locale: 'pt-BR'), class: "nav-link"%>
+						</li>
+					<li class="nav-item">
+						<%= link_to 'English', root_path(locale: 'en'), class: "nav-link"%>
+					</li>
+				</ul>
+    			<%= yield %> <%# pode ser o index.html.erb, edit.html.erb...%>
+			</div>
   </body>
+
 </html>
