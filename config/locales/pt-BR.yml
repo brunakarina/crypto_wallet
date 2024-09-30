@@ -9,7 +9,7 @@ pt-BR:
   links:
     edit: "Editar"
     show: "Mostrar"
-    destroy: "Apagar"
+    delete: "Apagar"
     new: "Novo"
     back: "Voltar"
   new:
